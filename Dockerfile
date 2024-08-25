@@ -7,7 +7,7 @@ RUN rm -rf /home/$NB_USER/ihaskell_examples /home/$NB_USER/work
 
 COPY . /home/$NB_USER
 
-RUN chown --recursive $NB_UID:users /home/$NB_USER
+RUN chown $NB_UID:users /home/$NB_USER/demos/Id3gini.ipynb
 
 ENV JUPYTER_ENABLE_LAB=yes
 # RUN git clone https://github.com/nickvgils/hMPC.git /home/$NB_USER/
