@@ -10,7 +10,7 @@ exceeding the number of parties. hMPC provides many secure data types, ranging
 from numeric types to more advanced types, for which the corresponding operations
 are made available through Haskell's mechanism for operator overloading.
 -}
-module Runtime (secIntGen, secFldGen, runMpc, runMpcWithArgs, runSession, Input, input, Output(..), transfer, (.+), (.-), (.*), (./), srecip, (.^), (.<), (.<=), (.>), (.==), isZero, isZeroPublic, ssignum, argmaxfunc, argmax, smaximum, ssum, sproduct,sall, randomBits, inProd, schurProd, matrixProd, IfElse(..), ifElseList, async, await) where
+module Runtime (secIntGen, secFldGen, SIO, SecureTypes(..), runMpc, runMpcWithArgs, runSession, Input(..), Output(..), transfer, (.+), (.-), (.*), (./), srecip, (.^), (.<), (.<=), (.>), (.==), isZero, isZeroPublic, ssignum, argmaxfunc, argmax, smaximum, ssum, sproduct,sall, randomBits, inProd, schurProd, matrixProd, IfElse(..), ifElseList, async, await) where
 
 import Control.Lens.Traversal
 import Data.Maybe

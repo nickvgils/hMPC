@@ -81,6 +81,7 @@ library:
     - Asyncoro
     - Parser
     - Hgmp
+    - Paths_hMPC
 
 
 executables:

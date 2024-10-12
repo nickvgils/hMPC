@@ -13,7 +13,8 @@ getArgParserExtra pars = execParser $ info (((,) <$> sample <*> pars) <**> helpe
 
 data Options = Options
   { parsParties :: [String], m :: Integer, myPid :: Integer, 
-    threshold :: Integer, basePort :: Integer, secParam :: Int, noAsync :: Bool, nrThreads :: Maybe Int}
+    threshold :: Integer, basePort :: Integer, secParam :: Int, noAsync :: Bool, nrThreads :: Maybe Int,
+    kernel :: [String], ghclib :: Maybe String, stack :: Bool} deriving (Show)
 
 sample :: Parser Options
 sample = Options
@@ -41,3 +42,11 @@ sample = Options
       <*> optional ( option auto
           ( long "threads" <> metavar "L"
             <> help "Set the number of Haskell threads that can run truly simultaneously."))
+      <*> many (argument str
+          ( metavar "kernelkey" ))
+      <*> optional (strOption
+          (long "ghclib" <> metavar "INT"
+         <> help "ghclib" ))
+      <*> switch
+          ( long "stack"
+         <> help "Flag to indicate stack usage" )

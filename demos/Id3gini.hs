@@ -63,11 +63,9 @@ import Control.Monad (forM)
 import Data.List (transpose, isPrefixOf)
 import Data.List.Split (splitOn)
 import Data.Char (toLower)
-import SecTypes (secIntGen, SecureTypes)
 import System.Log.Logger (infoM, rootLoggerName)
 import Text.Printf (printf)
 import Options.Applicative
-import Types
 import Runtime as Mpc
 import qualified Data.Set as Set
 
@@ -167,7 +165,7 @@ parser = Options
 main :: IO ()
 main = Mpc.runMpcWithArgs parser $ \opts -> do
   let (name, bitLengthOpts) = settings !! (dataset opts)
-  secInt <- secIntGen (maybe bitLengthOpts id (bitLength opts))
+  secInt <- secIntGen (maybe bitLengthOpts id (Id3gini.bitLength opts))
 
   filePath <- liftIO $ getDataFileName $ "id3/" ++ name ++ ".csv"
   content <- liftIO $ readFile filePath
