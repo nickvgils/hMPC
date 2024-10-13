@@ -45,7 +45,7 @@ RUN chown --recursive $NB_UID:users /home/$NB_USER
 
 USER $NB_UID
 
-RUN stack build
+RUN stack build --fast
 
 
 ENV JUPYTER_ENABLE_LAB=yes
