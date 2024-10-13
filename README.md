@@ -18,7 +18,8 @@ combined with asynchronous evaluation of the associated protocols.
 
 ## Documentation
 
-See `demos` for Haskell programs with lots of example code. See `docs/basics.rst` for a basic secure computation example in Haskell.
+See `demos` for Haskell programs with lots of example code. See `docs/basics.rst` for a basic secure computation example in Haskell. Click the "launch binder" badge above to view the entire
+repository and try out the Jupyter notebooks from the `demos` directory in the cloud, without any install.
 
 The initial reseach is part of a master's graduation project. For further reading, refer to the complementary master's thesis: [Multiparty Computation in Haskell: From MPyC to hMPC](https://research.tue.nl/en/studentTheses/multiparty-computation-in-haskell).
 
